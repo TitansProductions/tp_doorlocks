@@ -61,7 +61,9 @@ AddEventHandler("tp_doorlocks:server:requestDoorlocks", function()
 		return
 	end
 
-	TriggerClientEvent("tp_doorlocks:client:loadDoorsList", _source, DoorsList)
+	local job = API.getJob(_source)
+
+	TriggerClientEvent("tp_doorlocks:client:loadDoorsList", _source, DoorsList, job)
 end)
 
 RegisterServerEvent('tp_doorlocks:server:updateState')
