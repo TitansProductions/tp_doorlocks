@@ -13,7 +13,7 @@ local IsAuthorized = function(doorID, owned)
 
 	local data = PlayerData.DoorsList[doorID]
 
-	if data.authorizedJobs and TPZ.GetTableLength(data.authorizedJobs) > 0 then
+	if data.authorizedJobs and GetTableLength(data.authorizedJobs) > 0 then
 
 		for _, job in pairs(data.authorizedJobs) do
 
