@@ -7,6 +7,12 @@ local LoadedDoorsList = false
 --[[ Local Functions ]]--
 -----------------------------------------------------------
 
+local function GetTableLength(T)
+    local count = 0
+    for _ in pairs(T) do count = count + 1 end
+    return count
+end
+
 local LoadExistingDoorlockLocations = function ()
 
 	for _, result in ipairs(Config.DoorsList) do
